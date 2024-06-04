@@ -1,0 +1,82 @@
+
+    .codeLivre {
+      display: none;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #d6d6d6;
+    }
+
+    .container {
+      width: 50%;
+      margin: auto;
+      background: #ffffdd;
+      padding: 20px;
+      box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 600px;
+      padding: 10px;
+      margin: 10px 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .sup {
+      position: relative;
+      font-family: 'Arial', sans-serif;
+      width: 45%;
+      padding: 10px;
+      background-color: #f36262;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 30px;
+      text-align: center;
+
+    }
+
+    input[type="submit"] {
+      position: relative;
+      width: 49%;
+      padding: 10px;
+      border: none;
+      background-color: #5cb85c;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #348034;
+    }
+
+    .sup:hover {
+      background-color: #b80000;
+    }
+
+    .d {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      padding: 10px;
+      height: auto;
+    }
+
+    label {
+        margin-bottom: 10px;
+    }

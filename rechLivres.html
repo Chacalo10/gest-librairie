@@ -1,0 +1,51 @@
+<!-- fichier rechLivre.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bibliothèque - catalogue des livres</title>
+        <link rel="stylesheet" href="Styles/rechLivres.css">
+        <script defer>
+            function resetTermeRech(){
+                document.getElementById("tr").value = "";
+            }
+
+            function disabledText(){
+                var tyr = document.getElementById("typeRech").value;
+                var txt = document.getElementsByClassName("trc");
+                if(tyr === "tous"){
+                    txt.setAttribute("disabled", true);
+                    txt.classList.add("disabled");
+                }
+                else {
+                    txt.removeAttribute("disabled");
+                    txt.classList.remove("disabled");
+                }
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        <h1>RECHERCHE D'UN LIVRE</h1>
+        <form action="results.php" method="post">
+            <label>Choisir le champ de recherche: <br/>
+            <select name="typeRech" id="typeRech" onchange="disabledText(); resetTermeRech()">
+            <option value="auteur">Auteur</option>
+            <option value= "titre"> Titre</option>
+            <option value="isbn">ISBN</option>
+            <option value="tous">Tous</option>
+            </select></label>
+            <br/>
+            <label class="trc"> le terme de recherche: <br/>
+            <input name="termeRech" type="text" id="tr" class="trc"></label>
+            <br/>
+            <input type="submit" value="Rechercher" class="lien">
+            <a href="enreLivre.html" class="lien" id="aj">Ajouter un Livre</a>
+            <a href="librairie/voir_commande.php" class="lien" id="vc">Voir les commandes</a>
+            <a href="authmain.php" class="lien" id="rp">Revenir au menu principale</a>
+        </form>
+    </body>
+</html>
+

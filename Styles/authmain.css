@@ -1,0 +1,171 @@
+/* fichier authmain.css*/
+:root {
+    --primary : #4cae4c;
+    --primaryh : #0c810c;
+}
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4;
+    margin-bottom: 100px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login {
+    border: 1px solid #ccc;
+    width: 450px;
+    background: url("1.bmp");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: white;
+
+}
+
+.login-header {
+    background-color: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.login-form {
+    padding: 20px;
+    backdrop-filter: brightness(40%);
+}
+
+.login-form label {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.login-form input[type="submit"] {
+    background-color: var(--primary);
+    border-radius: 20px;
+    color: #fff;
+    line-height: 40px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.login-form input[type="submit"]:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+input {
+    width: 350px;
+    height: 40px;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: var(--primaryh);
+    transform: scale(1.05);
+}
+
+.d {
+    text-decoration: none;
+    color: #f4f4f4;
+    background-color: var(--primary);
+    padding: 10px 50px;
+    border-radius: 20px;
+    transition: transform 0.2s;
+}
+
+.l {
+    text-align: center;
+}
+
+.d:hover {
+    background-color: var(--primaryh);
+    transform: scale(1.05);
+}
+
+.srm {
+    color: var(--primaryh);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.srm:hover {
+    color: #f4f4f4;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 24px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 60px;
+}
+
+.dennied {
+    color: red;
+    text-align: center;
+}
+
+.li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    
+}
+
+.li a {
+    /**/
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--primary);
+    transition: transform 0.2s;
+    color: #f4f4f4;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.li a:hover {
+    background-color: var(--primaryh);
+    transform: scale(1.05);
+}
+
+.connect-user {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.connect-admin {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}

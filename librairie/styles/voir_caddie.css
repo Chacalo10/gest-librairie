@@ -1,0 +1,130 @@
+:root {
+    --primary : #4cae4c;
+    --primaryh : #0c810c;
+    --primaryb : #f82a2a;
+    --primarybh : #b80000;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.titre {
+    background-color: var(--primary);
+    /* Vert */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.titre a {
+    color: white;
+    text-decoration: none;
+}
+
+.caddie {
+    width: 70%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.caddie table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.caddie td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.caddie .produit {
+    color: var(--primaryh);
+    /* Vert foncé */
+}
+
+.caddie .montant {
+    text-align: right;
+}
+
+.caddie .total {
+    font-weight: bold;
+    color: var(--primaryh);
+    /* Vert foncé */
+    text-align: right;
+}
+
+.caddie form {
+    text-align: right;
+}
+
+.caddie label {
+    margin-right: 10px;
+}
+
+.caddie input[type="text"],
+.caddie input[type="submit"], 
+.caddie input[type="button"] {
+    padding: 8px;
+    margin-top: 10px;
+
+}
+
+.caddie input[type="submit"] {
+    background-color: var(--primary);
+    /* Vert */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+.caddie a {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primaryb);
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    margin: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+
+.caddie input[type="submit"]:hover {
+    background-color: var(--primaryh);
+}
+.caddie a:hover {
+    background-color: var(--primarybh);
+    
+}
+
+/* Styles généraux pour le formulaire */
+.form-group {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.form-group label {
+
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    /* Pour que la largeur inclue le padding */
+
+}

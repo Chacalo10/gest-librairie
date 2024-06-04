@@ -1,0 +1,76 @@
+<!-- fichier modifLivre.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de modification des livres</title>
+  <link rel="stylesheet" href="Styles/modifLivre.css">
+  <script>
+    window.onload = function () {
+      var params = new URLSearchParams(window.location.search);
+      document.getElementById('codeLivre').value = params.get('codeLivre');
+      document.getElementById('isbn').value = params.get('isbn');
+      document.getElementById('auteur').value = params.get('auteur');
+      document.getElementById('titre').value = params.get('titre');
+      document.getElementById('quantite').value = params.get('quantite');
+      document.getElementById('prix').value = params.get('prix');
+    };
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h2>Modification de livre</h2>
+    <form action="modifLivre.php" method="post">
+
+      <label for="codeLivre" class="codeLivre">CodeLivre :
+      <input class="codeLivre" type="text" id="codeLivre" name="codeLivre" required></label>
+
+      <label for="isbn">ISBN :
+      <input type="text" id="isbn" name="isbn" required></label>
+
+      <label for="auteur">Auteur :
+      <input type="text" id="auteur" name="auteur" required></label>
+
+      <label for="titre">Titre :
+      <input type="text" id="titre" name="titre" required></label>
+
+      <label for="quantite">Quantité :
+      <input type="number" id="quantite" name="quantite" required></label>
+
+      <label for="prix">Prix :
+      <input type="number" id="prix" name="prix" required></label>
+
+      <div class="d">
+        
+          <a href="rechLivres.html" class="sup">Annuler</a>
+       
+        <input type="submit" value="Modifier" class="btn">
+      </div>
+    </form>
+  </div>
+  <script>
+    $(document).ready(function()) {
+       
+      $('#supp').click(function()) {  
+        var codeLivre = $('#codeLivre').val();
+
+        $ajax({
+          url: 'supLivre.php',
+          type: 'post',
+          data: {
+            'codeLivre': codeLivre,
+          },
+          success: function (reponse) {
+            console.log(reponse);
+          }
+        })
+      }
+    }
+  </script>
+</body>
+
+</html>

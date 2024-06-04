@@ -1,0 +1,45 @@
+BODY {
+    background: #025053;
+}
+
+td {
+    background: #C2DADB;
+    color: #022324;
+    font-family: georgia;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #EB8814;
+    font-family: georgia;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.titre {
+    color: #047F84;
+    font-family: georgia;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.reference {
+    color: #047F84;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.description {
+    background: #DAE9EA;
+    color: #047F84;
+    font-family: verdana;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 1px;
+}

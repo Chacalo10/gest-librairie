@@ -1,0 +1,52 @@
+<!-- fichier inscription.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enregistrement de membre</title>
+  <link rel="stylesheet" href="Styles/inscription.css">
+</head>
+
+<body>
+
+  <script>
+    function testpass() {
+      var mdp = document.getElementById('pass').value;
+      var cmdp = document.getElementById('confpass').value;
+      if (mdp == cmdp) {
+        return true;
+      } else {
+        alert("verifier la confirmation du mot du pass");
+        return false;
+      }
+    }
+  </script>
+
+  <div class="container">
+    <h2>Enregistrement de membres</h2>
+
+    <form action="inscription.php" method="post" onsubmit="return testpass()">
+
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="pass">Mot de pass :</label>
+      <input type="password" id="pass" name="pass" required />
+
+      <label for="confpass">Confirmer le mot de pass :</label>
+      <input type="password" id="confpass" name="confpass" required />
+
+      <div class="d">
+        <a href="authmain.php"><span>Annuler</span></a>
+        <input type="submit" value="Enregistrer" name="submit" />
+
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

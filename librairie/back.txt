@@ -1,0 +1,133 @@
+
+-------------code voir_caddie-----------------
+<?php
+// Inclusion des variables de connexion à la base de données
+include("variables.inc.php");
+
+// Initialisation des variables
+$montant = 0;
+$listeproduits = "";
+
+// Connexion à la base de données
+$db = new mysqli($bdserver, $bdlogin, $bdpwd, $bd);
+if ($db->connect_error) {
+    die("Connexion échouée : " . $db->connect_error);
+}
+
+// Vérification et récupération des données du panier à partir du cookie
+if(isset($_COOKIE['monpanier']) && $_COOKIE['monpanier'] != '') {
+    $tab = array_count_values(explode(",", $_COOKIE['monpanier']));
+    $ids = implode(',', array_map('intval', array_keys($tab)));
+    $sql = "SELECT * FROM $livres WHERE codeLivre IN ($ids)";
+    if ($resultat = $db->query($sql)) {
+        while ($livre = $resultat->fetch_assoc()) {
+            $montant += $livre['pu'] * $tab[$livre['codeLivre']];
+            $listeproduits .= ',' . $livre['REF'];
+        }
+    }
+    $listeproduits = ltrim($listeproduits, ',');
+    $montant += 1000; // frais de livraison
+}
+
+// Fermeture de la connexion à la base de données
+$db->close();
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Librairie - validation de la commande</title>
+    <link href="look.css" rel="stylesheet" type="text/css"/>
+    <style>
+            /* Styles généraux pour la page */
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class='titre'><a href='boutique.php'>Boutique <i>Librairie</i></a></div>
+<div class='caddie'>
+    <table width='90%'>
+    
+
+
+    
+    </table>
+    <div class='total'>Montant + Frais (1000) : <?php echo $montant; ?> </div>
+    
+</div>
+</body>
+</html>
+
+
+
+
+
+<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #dddddd;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titre {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        .titre a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .catologue {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .liste {
+            width: 25%;
+            background-color: #dddddd;
+            padding: 10px;
+        }
+
+        .detail {
+            width: 25%;
+            padding: 10px;
+        }
+
+        .tdTitre {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .panier {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        
+
+
+
+

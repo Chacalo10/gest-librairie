@@ -1,0 +1,121 @@
+:root {
+    --primary : #4cae4c;
+    --primaryh : #0c810c;
+    --title : #256d29;
+    --button : #007bff;
+    --buttonh : #0050a7;
+    /*--primary : #ff3a3a;
+    --primaryh : #c70505;
+    --title : #ad0707;
+    --button : #fffb00;
+    --buttonh : #ced100;*/
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bbbbbb;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.titre {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.catalogue {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.catalogue .liste {
+    background-color: #e8f5e9;
+    width: 30%;
+    vertical-align: top;
+}
+
+.catalogue .liste .tdTitre {
+    background-color: var(--title);
+    color: white;
+    padding: 10px;
+}
+
+.catalogue .liste a {
+    color: var(--primaryh);
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+.catalogue .liste a:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+.catalogue .detail {
+    background-color: #ffffff;
+    width: 70%;
+    padding: 20px;
+}
+
+.catalogue .detail .tdTitre {
+    color: var(--title); 
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.catalogue .detail .description {
+    margin-bottom: 20px;
+}
+
+.catalogue .detail .panier {
+    background-color: #C8E6C9; 
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.catalogue .liste a.livre-actif {
+    background-color: var(--primary);
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: var(--button);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--buttonh);
+}
+
+#cmd {
+    text-align: right;
+}
+
+.bhome {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.bhome:hover {
+    background-color: var(--primaryh);
+}

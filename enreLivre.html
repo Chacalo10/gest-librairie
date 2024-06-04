@@ -1,0 +1,98 @@
+<!--fichier enreLivre.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enregistrement de livres</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #d6d6d6;
+    }
+
+    .container {
+      width: 50%;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 600px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    input[type="reset"] {
+      width: 49.5%;
+      padding: 10px;
+      border: none;
+      background-color: #5cb85c;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    input[type="submit"] {
+      width: 49.5%;
+      padding: 10px;
+      border: none;
+      background-color: #5cb85c;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #348034;
+    }
+
+    .d {
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Enregistrement de livre</h2>
+    <form action="enreLivre.php" method="post">
+
+      <label for="isbn">ISBN :</label>
+      <input type="text" id="isbn" name="isbn" required>
+
+      <label for="auteur">Auteur :</label>
+      <input type="text" id="auteur" name="auteur" required>
+
+      <label for="titre">Titre :</label>
+      <input type="text" id="titre" name="titre" required>
+
+      <label for="quantite">Quantite :</label>
+      <input type="number" id="quantite" name="quantite" required>
+
+      <label for="prix">Pu :</label>
+      <input type="number" id="prix" name="prix" required>
+
+
+      <div class="d">
+        <input type="reset" value="Annuler">
+
+
+      </div>
+
+    </form>
+  </div>
+</body>
+
+</html>
